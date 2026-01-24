@@ -192,6 +192,22 @@
         color: #ffffff;
       }
 
+      .navbar-brand::after {
+        display: none !important;
+        content: none !important;
+      }
+
+      /* Ապահովում ենք, որ hover-ի ժամանակ ոչ մի գիծ չհայտնվի լոգոյի համար */
+      .navbar-brand:hover::after {
+        width: 0 !important;
+      }
+
+      /* Եթե ցանկանում եք, որ լոգոն hover-ի ժամանակ պարզապես մի փոքր փոխի գույնը կամ թափանցիկությունը */
+      .navbar-brand:hover {
+        opacity: 0.8;
+        text-decoration: none !important; /* Բացառում է նաև սովորական ընդգծումը */
+      }
+
       .btn-primary {
         background: linear-gradient(135deg, #0d6efd, #084298);
         border: none;
@@ -250,7 +266,7 @@
   <body>
     <header class="main-header">
       <nav class="navbar navbar-expand-lg navbar-dark container">
-        <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+        <a class="navbar-brand fw-bold" href="#">SQL ուսուցման Կայք</a>
         <button
           class="navbar-toggler"
           type="button"

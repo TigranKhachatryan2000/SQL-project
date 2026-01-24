@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SQL Ուսուցման Կայք</title>
+    <title>SQL ուսուցման Կայք</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -210,6 +210,22 @@
         padding: 20px;
       }
 
+      .navbar-brand::after {
+        display: none !important;
+        content: none !important;
+      }
+
+      /* Ապահովում ենք, որ hover-ի ժամանակ ոչ մի գիծ չհայտնվի լոգոյի համար */
+      .navbar-brand:hover::after {
+        width: 0 !important;
+      }
+
+      /* Եթե ցանկանում եք, որ լոգոն hover-ի ժամանակ պարզապես մի փոքր փոխի գույնը կամ թափանցիկությունը */
+      .navbar-brand:hover {
+        opacity: 0.8;
+        text-decoration: none !important; /* Բացառում է նաև սովորական ընդգծումը */
+      }
+
       /* Fix body scroll issues */
       body.modal-open {
         overflow: hidden !important;
@@ -240,7 +256,7 @@
     <!-- HEADER -->
     <header class="main-header">
       <nav class="navbar navbar-expand-lg navbar-dark container">
-        <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+        <a class="navbar-brand fw-bold" href="#">SQL ուսուցման Կայք</a>
         <button
           class="navbar-toggler"
           type="button"

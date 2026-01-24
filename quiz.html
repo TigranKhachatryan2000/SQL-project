@@ -43,6 +43,67 @@
         font-size: 0.95rem;
       }
 
+      /* ===== HEADER & NAVBAR ===== */
+      .main-header {
+        background: linear-gradient(135deg, #0d6efd, #084298);
+        padding: 0; /* Հեռացնում ենք padding-ը, որ navbar-ը լրացնի տարածքը */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .navbar {
+        padding: 15px 0 !important;
+        background: transparent !important; /* Հեռացնում ենք inline background-ը */
+      }
+
+      /* Մենյուի հղումների ոճը */
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500;
+        position: relative;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+      }
+
+      /* Սահող գիծը ՄԻԱՅՆ nav-link-երի համար */
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #fff !important;
+      }
+
+      /* Logo-ի ոճը (ԱՌԱՆՑ ԳԾԻ) */
+      .navbar-brand {
+        font-size: 1.5rem;
+        color: #fff !important;
+        position: relative;
+      }
+
+      .navbar-brand:hover {
+        opacity: 0.9;
+      }
+
+      /* Հեռացնում ենք հնարավոր բոլոր գծերը լոգոյի տակից */
+      .navbar-brand::after {
+        display: none !important;
+        content: none !important;
+      }
+
       /* ===== MAIN CONTAINER (Glassmorphism) ===== */
       main.container {
         background: rgba(255, 255, 255, 0.9);
@@ -190,12 +251,11 @@
   </head>
   <body>
     <header class="main-header">
-      <nav
-        class="navbar navbar-expand-lg navbar-dark"
-        style="background: linear-gradient(135deg, #0d6efd, #084298)"
-      >
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+          <a class="navbar-brand fw-bold" href="#"
+            >SQL ուսուցման Կայք</a
+          >
           <button
             class="navbar-toggler"
             type="button"
