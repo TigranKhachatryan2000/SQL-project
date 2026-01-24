@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hy">
   <head>
     <meta charset="UTF-8" />
@@ -9,180 +9,223 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
     <style>
-  body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(
-        rgba(248, 249, 250, 0.8),
-        rgba(36, 66, 97, 0.9)
-      ),
-      url("./images/images(2).jpeg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #333;
-  }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          linear-gradient(rgba(248, 249, 250, 0.8), rgba(36, 66, 97, 0.9)),
+          url("./images/images(2).jpeg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #333;
+      }
 
-  /* ===== HEADER ===== */
-  header {
-    background: linear-gradient(135deg, #0d6efd, #084298);
-    color: #fff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+      /* ===== HEADER ===== */
+      header {
+        background: linear-gradient(135deg, #0d6efd, #084298);
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
 
-  header h1 {
-    font-size: 1.7rem;
-    letter-spacing: 1px;
-  }
+      header h1 {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+      }
 
-  header nav a {
-    text-decoration: none;
-    transition: opacity 0.3s;
-    font-size: 0.95rem;
-  }
+      header nav a {
+        text-decoration: none;
+        transition: opacity 0.3s;
+        font-size: 0.95rem;
+      }
 
-  /* ===== MAIN CONTAINER (Glassmorphism) ===== */
-  main.container {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px); /* Ապակու էֆեկտ */
-    padding: 40px;
-    border-radius: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: fadeIn 0.8s ease-in-out;
-  }
+      /* ===== MAIN CONTAINER (Glassmorphism) ===== */
+      main.container {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px); /* Ապակու էֆեկտ */
+        padding: 40px;
+        border-radius: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        animation: fadeIn 0.8s ease-in-out;
+      }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-  main h2 {
-    font-weight: 800;
-    color: #084298;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    padding-bottom: 15px;
-  }
+      main h2 {
+        font-weight: 800;
+        color: #084298;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 15px;
+      }
 
-  main h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: #0d6efd;
-    border-radius: 2px;
-  }
+      main h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
 
-  /* ===== QUESTION BLOCKS ===== */
-  .question-block {
-    background: #ffffff;
-    border: 1px solid #e9ecef;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    transition: all 0.3s ease;
-  }
+      /* ===== QUESTION BLOCKS ===== */
+      .question-block {
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+      }
 
-  .question-block:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    border-color: #0d6efd;
-  }
+      .question-block:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        border-color: #0d6efd;
+      }
 
-  .question-block strong {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 15px;
-  }
+      .question-block strong {
+        font-size: 1.1rem;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 15px;
+      }
 
-  /* ===== OPTIONS (Radio Buttons Custom Style) ===== */
-  .option {
-    padding: 12px 15px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
-    border: 1px solid transparent;
-  }
+      /* ===== OPTIONS (Radio Buttons Custom Style) ===== */
+      .option {
+        padding: 12px 15px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: background 0.2s;
+        border: 1px solid transparent;
+      }
 
-  .option:hover {
-    background: #f8f9fa;
-    border-color: #dee2e6;
-  }
+      .option:hover {
+        background: #f8f9fa;
+        border-color: #dee2e6;
+      }
 
-  .option input[type="radio"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-  }
+      .option input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+      }
 
-  /* ===== RESULTS & FEEDBACK ===== */
-  .correct {
-    background-color: #d4edda !important;
-    border-color: #c3e6cb !important;
-    color: #155724;
-  }
+      /* ===== RESULTS & FEEDBACK ===== */
+      .correct {
+        background-color: #d4edda !important;
+        border-color: #c3e6cb !important;
+        color: #155724;
+      }
 
-  .incorrect {
-    background-color: #f8d7da !important;
-    border-color: #f5c6cb !important;
-    color: #721c24;
-  }
+      .incorrect {
+        background-color: #f8d7da !important;
+        border-color: #f5c6cb !important;
+        color: #721c24;
+      }
 
-  .question-result {
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-  }
+      .question-result {
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
 
-  /* ===== BUTTONS ===== */
-  .btn-check-one {
-    border-radius: 20px;
-    padding: 6px 20px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
+      /* ===== BUTTONS ===== */
+      .btn-check-one {
+        border-radius: 20px;
+        padding: 6px 20px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
 
-  .btn-primary {
-    border-radius: 25px;
-    padding: 10px 30px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
-  }
+      .btn-primary {
+        border-radius: 25px;
+        padding: 10px 30px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+      }
 
-  footer {
-    background-color: #212529;
-    color: #adb5bd;
-    padding: 30px 0;
-    margin-top: 60px;
-  }
-</style>
+      footer {
+        background-color: #212529;
+        color: #adb5bd;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+
+      @media (max-width: 768px) {
+        .main-header {
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .navbar-brand {
+          font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+          margin: 5px 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <div class="container text-center">
-        <h1 class="fw-bold">SQL լեզվի ուսուցման աջակցման վեբ կայք</h1>
-        <nav class="mt-3">
-          <a href="intro.html" class="text-white mx-2">Ներածություն</a>
-          <a href="application.html" class="text-white mx-2">Կիրառությունը</a>
-          <a href="commands.html" class="text-white mx-2">
-            SQL գործիքի հրամանները
-          </a>
-          <a href="quiz.html" class="text-white mx-2">Անցնել թեստը</a>
-        </nav>
-      </div>
+    <header class="main-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background: linear-gradient(135deg, #0d6efd, #084298)"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="intro.html">Ներածություն</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="application.html">Կիրառությունը</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="commands.html">SQL հրամանները</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Թեստ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="container">
@@ -463,7 +506,7 @@
         <label class="option d-block">
           <input type="radio" name="q${i}" value="${j}" /> ${opt}
         </label>
-      `
+      `,
         )
         .join("")}
 
@@ -516,5 +559,6 @@
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -219,22 +219,57 @@
       body.modal-open #backToTop {
         display: none !important;
       }
+
+      @media (max-width: 768px) {
+        .main-header {
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .navbar-brand {
+          font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+          margin: 5px 0;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- HEADER -->
     <header class="main-header">
-      <div class="container text-center">
-        <h1 class="fw-bold">SQL լեզվի ուսուցման աջակցման վեբ կայք</h1>
-        <nav class="mt-3">
-          <a href="intro.html" class="text-white mx-2">Ներածություն</a>
-          <a href="application.html" class="text-white mx-2">Կիրառությունը</a>
-          <a href="commands.html" class="text-white mx-2"
-            >SQL գործիքի հրամանները</a
-          >
-          <a href="quiz.html" class="text-white mx-2">Անցնել թեստը</a>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Ներածություն</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="application.html">Կիրառությունը</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="commands.html">SQL հրամանները</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html">Թեստ</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- MAIN CONTENT -->

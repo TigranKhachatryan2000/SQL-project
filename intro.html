@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hy">
   <head>
     <meta charset="UTF-8" />
@@ -12,10 +12,8 @@
       /* ===== PAGE BACKGROUND ===== */
       body {
         font-family: "Segoe UI", sans-serif;
-        background: linear-gradient(
-            rgba(248, 249, 250, 0.85),
-            rgba(36, 66, 97, 0.85)
-          ),
+        background:
+          linear-gradient(rgba(248, 249, 250, 0.85), rgba(36, 66, 97, 0.85)),
           url("./images/images(2).jpeg");
         background-size: cover;
         background-position: center center;
@@ -121,15 +119,14 @@
 
       /* ===== CODE BLOCKS ===== */
       pre {
-        background-color: #1e1e1e !important; /* Ավելի մուգ սև-մոխրագույն */
-        color: #d4d4d4 !important; /* Բաց մոխրագույն տեքստ */
+        background-color: #1e1e1e !important;
+        color: #d4d4d4 !important;
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid #333;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        line-height: 1.5;
-        font-family: "Consolas", "Monaco", monospace;
-        position: relative;
+        overflow-x: auto; /* Սա թույլ կտա միայն կոդը սքրոլ անել ներսում */
+        max-width: 100%; /* Չի թողնի, որ pre-ն լինի ավելի լայն քան էկրանը */
+        white-space: pre-wrap; /* Ըստ ցանկության՝ կարող եք օգտագործել նաև սա կոդը հաջորդ տող տեղափոխելու համար */
+        word-wrap: break-word;
       }
 
       /* Կոդի ներսի հատվածների գույները */
@@ -168,7 +165,6 @@
       }
 
       ul li::before {
-        content: "✔";
         position: absolute;
         left: 0;
         color: #0d6efd;
@@ -209,22 +205,81 @@
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
       }
+
+      @media (max-width: 768px) {
+        .main-header {
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .navbar-brand {
+          font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+          margin: 5px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container.my-5 {
+          padding: 25px 15px; /* Փոքրացրեք padding-ը մոբայլում */
+          margin-top: 20px !important;
+          margin-bottom: 20px !important;
+          border-radius: 15px; /* Ավելի փոքր շառավիղ */
+        }
+
+        header h1 {
+          font-size: 1.4rem;
+          padding: 0 10px;
+        }
+
+        p {
+          font-size: 0.95rem; /* Մի փոքր փոքրացրեք տեքստը հարմարավետության համար */
+          text-align: left; /* Մոբայլում justify-ը երբեմն տգեղ է նայվում */
+        }
+
+        pre {
+          padding: 15px;
+          font-size: 0.85rem;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <header>
-      <div class="container text-center">
-        <h1 class="fw-bold">SQL լեզվի ուսուցման աջակցման վեբ կայք</h1>
-        <nav class="mt-3">
-          <a href="intro.html" class="text-white mx-2">Ներածություն</a>
-          <a href="application.html" class="text-white mx-2">Կիրառությունը</a>
-          <a href="commands.html" class="text-white mx-2">
-            SQL գործիքի հրամանները
-          </a>
-          <a href="quiz.html" class="text-white mx-2">Անցնել թեստը</a>
-        </nav>
-      </div>
+    <header class="main-header">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold" href="#">SQL Ուսուցման Կայք</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Ներածություն</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="application.html">Կիրառությունը</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="commands.html">SQL հրամանները</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html">Թեստ</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <div class="container my-5">
@@ -782,5 +837,6 @@ WHERE Age > (SELECT AVG(Age) FROM Students);
         </p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
