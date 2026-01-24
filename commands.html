@@ -30,32 +30,48 @@
       }
 
       /* ===== HEADER ===== */
-      header {
+      header.main-header {
         background: linear-gradient(135deg, #0d6efd, #084298);
         color: #fff;
-        padding: 25px 0; /* Increased padding */
-        position: sticky;
+        padding: 10px 0; /* Մի փոքր փոքրացրել ենք padding-ը սքրոլի ժամանակ հարմար լինելու համար */
+        position: fixed; /* Sticky-ի փոխարեն օգտագործում ենք fixed՝ ավելի կայուն վարքագծի համար */
         top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        left: 0;
+        width: 100%;
+        z-index: 2000; /* Ավելի բարձր z-index */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Քանի որ header-ը fixed է, մարմնին տալիս ենք padding-top, որպեսզի բովանդակությունը չմնա տակը */
+      body {
+        padding-top: 100px; 
       }
 
       header .navbar-brand {
-        font-size: 1.9rem; /* Bigger brand */
+        font-size: 1.7rem;
         font-weight: 700;
+        color: #fff !important;
+        position: relative;
+        text-decoration: none !important;
+      }
+
+      /* Հեռացնում ենք գիծը ԼՈԳՈՅԻ տակից */
+      header .navbar-brand::after {
+        display: none !important;
+        content: none !important;
       }
 
       header .navbar-nav .nav-link {
         position: relative;
-        color: #ffffff !important;
+        color: rgba(255, 255, 255, 0.9) !important;
         margin: 0 12px;
         font-weight: 500;
         text-decoration: none !important;
-        padding-bottom: 6px;
+        padding-bottom: 5px;
         transition: color 0.3s ease;
       }
 
-      /* Underline animation on hover */
+      /* Գիծը ՄԻԱՅՆ ՄԵՆՅՈՒԻ հղումների համար */
       header .navbar-nav .nav-link::after {
         content: "";
         position: absolute;
@@ -69,6 +85,10 @@
 
       header .navbar-nav .nav-link:hover::after {
         width: 100%;
+      }
+
+      header .navbar-nav .nav-link:hover {
+        color: #fff !important;
       }
 
       /* ===== MAIN CARD ===== */
@@ -209,36 +229,30 @@
     </style>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="navbar navbar-expand-lg navbar-dark container">
-        <a class="navbar-brand fw-bold" href="#">SQL ուսուցման Կայք</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<header class="main-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">SQL ուսուցման Կայք</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="intro.html">Ներածություն</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="application.html">Կիրառությունը</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="commands.html">SQL հրամանները</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="quiz.html">Թեստ</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="intro.html">Ներածություն</a></li>
+              <li class="nav-item"><a class="nav-link" href="application.html">Կիրառությունը</a></li>
+              <li class="nav-item"><a class="nav-link" href="commands.html">SQL հրամանները</a></li>
+              <li class="nav-item"><a class="nav-link" href="quiz.html">Թեստ</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
